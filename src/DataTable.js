@@ -5,7 +5,7 @@ import "./DataTable.css";
 import { MdNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
 
-const DataTable = ({ data, columnsToSkip=[],itemsPerPage=10 }) => {
+const DataTable = ({ data, columnsToSkip=[],itemsPerPage=10,thbg="" }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortedColumn, setSortedColumn] = useState("");
   const [sortDirection, setSortDirection] = useState("");
@@ -128,7 +128,7 @@ const DataTable = ({ data, columnsToSkip=[],itemsPerPage=10 }) => {
   return (
     <>
       <div className="table-main">
-        <div className="tbl-header">
+        <div className="tbl-header" style={{background:thbg}}>
           <div className="searchbar">
             <input
               type="text"
